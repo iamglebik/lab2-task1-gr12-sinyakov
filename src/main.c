@@ -1,8 +1,12 @@
-/* hello.c */
 #include <stdio.h>
+#include <stdlib.h>
 
-void main (void)
-{
-	printf ("Hello World\n");
-	printf ("Goodbye World\n");
+int main(int argc, char *argv[]) {
+		if (argc < 2) {
+				printf("Использование: %s <размер массива>\n", argv[0]);
+				return 1;
+		}
+		int size = atoi(argv[1]);
+		printf("Размер массива: %d\n", size);
+		return 0;
 }
